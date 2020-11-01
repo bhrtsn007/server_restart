@@ -20,9 +20,9 @@ if [ "$data_sanity" == "true" ]; then
 	echo "$name please type 'Yes' for confirming and 'No' for aborting the process:"
 	read confirmation
 	if [ "$confirmation" == "Yes" ]; then
-		sudo service butler_server stop
+		sudo systemctl stop butler_server.service
 		sleep 2
-		sudo service butler_server start
+		sudo systemctl start butler_server.service
 		sleep 2
 		echo "####################################################"
 		echo "Check logs for Butler server status"
