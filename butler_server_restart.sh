@@ -5,8 +5,8 @@ echo "Restart script call at $DATE"
 echo "###############################################################################"
 echo ""
 echo "Checking Data sanity on Core Server"
-data_sanity=`sudo /opt/butler_server/erts-9.3.3.6/bin/escript /home/gor/easy_console/server_restart/data_sanity.escript  | awk -F[\(\)] '{print $2}'`
-data_domain=`sudo /opt/butler_server/erts-9.3.3.6/bin/escript /home/gor/easy_console/server_restart/data_validation.escript  | awk -F[\(\)] '{print $2}'`
+data_sanity=`sudo /opt/butler_server/erts-11.1.1/bin/escript /home/gor/easy_console/server_restart/data_sanity.escript  | awk -F[\(\)] '{print $2}'`
+data_domain=`sudo /opt/butler_server/erts-11.1.1/bin/escript /home/gor/easy_console/server_restart/data_validation.escript  | awk -F[\(\)] '{print $2}'`
 echo "Data sanity is : " $data_sanity
 echo "Data domain_validation function is : " $data_domain
 

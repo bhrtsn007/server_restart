@@ -8,5 +8,5 @@ main(_) ->
 data_domain_check() ->
     net_kernel:start([shell, shortnames]),
     erlang:set_cookie(node(), butler_server),
-    Data=rpc:call(erlang:list_to_atom("butler_server@localhost"),data_domain_validation_functions, validate_all_tables, [true]),
+    Data=rpc:call(erlang:list_to_atom("butler_server@localhost"),data_domain_validation_functions, validate_all_tables, []),
     io:format("Data domain is : (~p)",[Data]).
